@@ -30,18 +30,17 @@ services:
     user: root
     volumes:
       - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
-      - app-logs:/var/log/app:ro
+      - ./app-logs:/var/log/app:ro  # Reads from the same local folder
     depends_on:
       - logstash
 
   fastapi-app:
-    build: 
-      context: .
-      dockerfile: app/Dockerfile
+    build:
+      context: ./app  # This must point to the folder containing the Dockerfile
     ports:
       - "8000:8000"
     volumes:
-      - app-logs:/var/log/app
+      - ./app-logs:/var/log/app  # Maps local ./app-logs to container /var/log/app
 
 volumes:
   app-logs:
