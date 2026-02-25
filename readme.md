@@ -28,7 +28,7 @@ elk-lab/
 ### SSH to the machine
 
 ### Run these commands
-    sudo apt sudo apt update && sudo apt upgrade -y 
+    sudo apt update && sudo apt upgrade -y 
 
 
 ## Install Docker and docker compose
