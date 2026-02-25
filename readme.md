@@ -146,7 +146,7 @@ http://<AWS_IP>:8000/api/v1/items/
 ### Install Requests Library (quick installation)
     pip3 install requests --break-system-packages
 
-## Generating Traffic. ELK stack is "silent" until logs are produced. You must generate activity:
+### Generating Traffic. ELK stack is "silent" until logs are produced. You must generate activity:
 
 <p>Go to your flood_traffic.py file and change API_BASE_URL = "http://localhost:8000/api/v1" to API_BASE_URL = "http://<ec2-ip>:8000/api/v1"</p>
 
