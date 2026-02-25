@@ -33,7 +33,7 @@ elk-lab/
 
 ## Install Docker and docker compose
 ### Install Docker
-    sudo apt install docker.io
+    sudo apt install docker.io -y
     docker --version # docker installed
     sudo usermod -aG docker $USER #add user (ubuntu) to the docker group
     sudo reboot # Reboot the EC2 machine and then SSH again
